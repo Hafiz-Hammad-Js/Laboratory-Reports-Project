@@ -1,0 +1,95 @@
+
+
+.lpRParentRegister{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    height: 100vh;
+}
+.lpRPHead01{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lpRPInp{
+    width: 280px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    background-color: #dddddd;
+    margin-top: 10px;
+}
+
+.lpRPBtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lpRPBtn>button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #3EA84B;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    width: 280px;
+}
+
+.line{
+    width: 2px;
+    border: 1px solid black;
+    height: 400px;
+}
+
+
+@media(max-width: 390px){
+    .lpRParentRegister{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: 0;
+        height: 100vh;
+    }
+    .line{
+        display: none;
+    }
+    .lpRPHead01{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media(min-width: 390px) and (max-width: 576px){
+    .lpRParentRegister{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        box-sizing: 0;
+        height: 100vh;
+    }
+    .line{
+        display: none;
+    }
+    .lpRPHead01{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
