@@ -1,0 +1,116 @@
+.lpth{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+.lpRD01{
+    display: flex;
+    justify-content: center;
+
+}
+table{
+    background-color: #e4e2e2;
+    border-radius: 10px;
+}
+
+.lpth02{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: #3EA84B;
+}
+
+.lpRD01H1{
+    display: flex;
+    justify-content: center;
+}
+
+.lpRD01H1>h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 44px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: #000000;
+}
+
+.btnParent{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btnParent>button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #3EA84B;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    width: 280px;
+    font-size: 24px;
+}
+
+.reportsCheck{
+    background-color: #3EA84B;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.reportsCheck>h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.reportsCheck>button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    color: #3EA84B;
+}
+
+#paddingStatus{
+    background-color: red;
+    color: white;
+    border: none;
+
+}
+
+
+.inpParent>input{
+    width: 300px;
+    background-color: #e4e2e2;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.inpParent{
+    display: flex;
+    justify-content: center;
+}
+
+#subBTN{
+    border: none;
+    padding: 10px;
+    background-color: #3EA84B;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 300px;
+}

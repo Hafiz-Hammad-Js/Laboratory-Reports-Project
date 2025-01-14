@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Detail || Lab Reports</title>
+    <link rel="stylesheet" href="Deatil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="lpRD01H1">
+            <h1>Patient Detail</h1>
+        </div>
+        <div class="lpRD01">
+            <table>
+                <tr>
+                    <th class="lpth">Patient Name</th>
+                    <th class="lpth02">Shamim A.wahab</th>
+                </tr>
+                <tr>
+                    <th class="lpth">Phone Number</th>
+                    <th class="lpth02">+92 333 2916 105</th>
+                </tr>
+                <tr>
+                <tr>
+                    <th class="lpth">Patient Age</th>
+                    <th class="lpth02">18</th>
+                </tr>
+                <tr>
+                <tr>
+                <tr>
+                    <th class="lpth">Patient MR Number</th>
+                    <th class="lpth02">0222201</th>
+                </tr>
+                <tr>
+                <tr>
+                <tr>
+                    <th class="lpth">Patient Password</th>
+                    <th class="lpth02">1234501</th>
+                </tr>
+                <tr>
+            </table>
+
+        </div>
+
+    
+        <div class="btnParent">
+            <button type="button" class="btnParent" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Post Reports
+            </button>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Post Reports</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="inpParent">
+                            <input placeholder="Patient Name" type="text" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <input placeholder="Patient P/Number" type="number" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <input placeholder="Patient ID" type="number" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <input placeholder="Patient Age" type="number" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <input placeholder="Patient Test Name" type="text" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <input placeholder="Patient Report URL" type="text" name="" id="">
+                        </div>
+                        <div class="inpParent">
+                            <button id="subBTN">Submit</button>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+        <div class="reportsCheck">
+            <h1>CBC Test</h1>
+            <button>Check Reports</button>
+        </div>
+
+        <div class="reportsCheck">
+            <h1>CBC Test</h1>
+            <button>Check Reports</button>
+        </div>
+
+        <div class="reportsCheck">
+            <h1>CBC Test</h1>
+            <button>Check Reports</button>
+        </div>
+
+        <div class="reportsCheck">
+            <h1>CBC Test</h1>
+            <button id="paddingStatus">Pendding</button>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
