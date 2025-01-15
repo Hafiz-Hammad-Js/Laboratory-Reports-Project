@@ -1,18 +1,21 @@
 let renderData = document.querySelector(".lpRD01")
 
-let params =new URLSearchParams(location.search)
+let params = new URLSearchParams(location.search)
 let id = params.get("id")
 
 let getLocalRegisterData = localStorage.getItem("patientRegisterDataBase")
 let registerData = JSON.parse(getLocalRegisterData)
 
-registerData.filter((data) =>{
-   return String(data.patientID) === String(id)
-}).map((data)=>{
-    
-    let {patientName,patientPhoneNum,patientAge,patientMrNum,patientPassword} =data
-    
-    renderData.innerHTML =`
+let dataValue = [];
+
+registerData.filter((data) => {
+    return String(data.patientID) === String(id)
+}).map((data) => {
+
+    dataValue.push(data)
+    let { patientName, patientPhoneNum, patientAge, patientMrNum, patientPassword } = data
+
+    renderData.innerHTML = `
     
     <table>
                 <tr>
@@ -44,4 +47,73 @@ registerData.filter((data) =>{
             </table>
     `
 })
-   
+
+
+// post Report Work ... //
+
+let PName = document.getElementById("PName")
+let PhoneNum = document.getElementById("PhoneNum")
+let PId = document.getElementById("PatientId")
+let Age = document.getElementById("Age")
+let TestName = document.getElementById("TestName")
+let reportURL = document.getElementById("reportURL")
+
+PName.value = dataValue[0].patientName;
+PhoneNum.value = dataValue[0].patientPhoneNum;
+PId.value = dataValue[0].patientID
+Age.value = dataValue[0].patientAge
+
+let submitData = () => {
+    if (!PName.value || !PhoneNum.value || !PId.value || !Age.value || !TestName.value || !reportURL.value) {
+        alert("Enter All feilds")
+    } else {
+        let reportObject = {
+            patientName: PName.value,
+            patientPhoneNum: PhoneNum.value,
+            patientID: PId.value,
+            patientAge: Age.value,
+            patientTest: TestName.value,
+            patientReport: reportURL.value
+        }
+
+
+        let reports = localStorage.getItem("PatientReports")
+
+        if (reports == null) {
+            reports = [reportObject]
+        } else {
+            reports = JSON.parse(reports)
+            reports.push(reportObject)
+        }
+
+        localStorage.setItem("PatientReports", JSON.stringify(reports))
+        alert("Patient Report has submited.")
+
+        location.reload()
+    }
+}
+
+
+// Render Patient Reports //
+let reportsCheck = document.querySelector(".render")
+
+let getlocalReportsData = localStorage.getItem("PatientReports")
+let reportsData = JSON.parse(getlocalReportsData)
+
+reportsData.filter((data) => data.patientID == id).map((data) => {
+
+    let { patientTest,patientReport } = data
+    reportsCheck.innerHTML += `
+
+    <div class="reportsCheck">
+      <h1>${patientTest}</h1>
+    <button onclick="checkReport('${patientReport}')">Check Reports</button>
+    </div>
+    
+    `
+})
+
+
+let checkReport = (id) => {
+    location.href = `../CheckReports/index.html?id=${id}`
+}
