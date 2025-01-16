@@ -48,6 +48,13 @@ registerData.filter((data) => {
     `
 })
 
+let data = new Date 
+let tariq = data.toLocaleDateString()
+console.log(tariq)
+
+let time = new Date 
+let wqat = data.toLocaleTimeString()
+console.log(wqat)
 
 // post Report Work ... //
 
@@ -73,7 +80,9 @@ let submitData = () => {
             patientID: PId.value,
             patientAge: Age.value,
             patientTest: TestName.value,
-            patientReport: reportURL.value
+            patientReport: reportURL.value,
+            testDate : tariq,
+            testTime : wqat
         }
 
 
@@ -117,3 +126,5 @@ reportsData.filter((data) => data.patientID == id).map((data) => {
 let checkReport = (id) => {
     location.href = `../CheckReports/index.html?id=${id}`
 }
+
+
